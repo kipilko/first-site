@@ -1,20 +1,42 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Start way</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Start Way</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <h1>First steps</h1>
-  <h2>Starting my journey into Web Development</h2>
-  <p>Step by step. No rush. Just progress.</p>
-  <button>clck on me</button>
-  <button id="elza" style="position: fixed; bottom: 1px; left: 1px; z-index: 1000; padding: 13px; font-size: 13px; cursor: pointer;">&#9731;</button>
-  <p>I`m start now moving in IT.</p>
-  <p>Free potato at the KFC)</p>
-  <button id="theme-toggle" style="position: fixed; top: 10px; right: 10px; z-index: 1000; padding: 10px; font-size: 20px; cursor: pointer;">☀️</button>
- <script src="script.js"></script>  
+
+<body data-page="home">
+
+  <div id="loader">Loading your future...</div>
+
+  <header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="goals.html">Goals</a>
+      <a href="joke.html">Joke</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>First Steps</h1>
+      <p class="subtitle">You're seen very nice</p>
+      <p>No risk. No rich.</p>
+      <button id="fun-button">Click me</button>
+    </section>
+
+    <section class="explore">
+      <h2>Explore</h2>
+    </section>
+  </main>
+
+  <button id="theme-toggle" aria-label="Toggle theme">☀️</button>
+
+  <script src="script.js"></script>
 </body>
+
 </html>
 
