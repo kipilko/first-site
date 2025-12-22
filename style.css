@@ -151,3 +151,38 @@ body.light {
 /* Interactive helpers */
 .hover-accent { color: var(--accent); }
 .done { text-decoration: line-through; opacity: 0.5; }
+
+/* Snowfall effect */
+.snowflake {
+  position: fixed;
+  top: -10px;
+  color: #fff;
+  font-size: 10px;
+  user-select: none;
+  z-index: 1000;
+  pointer-events: none;
+  animation-name: fall;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes fall {
+  0% { transform: translateY(0) rotate(0deg); }
+  100% { transform: translateY(100vh) rotate(360deg); }
+}
+
+/*Timer 2026*/
+#countdown {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  font-size: 18px;
+  padding: 5px 10px;
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  border-radius: 5px;
+  z-index: 1001;
+  text-shadow: 0 0 5px #f46;
+}
+

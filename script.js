@@ -32,7 +32,7 @@ function createFloatingCircle() {
 
 if (funButton) {
   funButton.addEventListener('click', () => {
-    funButton.textContent = 'Can I fck ur boobies?';
+    funButton.textContent = 'I want fck ur boobies!!!';
     for (let i = 0; i < 16; i++) createFloatingCircle();
   });
 }
@@ -94,4 +94,43 @@ function goalsPage() {
     });
   });
 }
+
+//snowfall effect
+function createSnowflake() {
+  const snowflake = document.createElement('div');
+  snowflake.classList.add('snowflake');
+  snowflake.textContent = '❄';
+  snowflake.style.left = Math.random() * window.innerWidth + 'px';
+  snowflake.style.fontSize = (Math.random() * 20 + 10) + 'px';
+  snowflake.style.opacity = Math.random();
+  snowflake.style.animationDuration = (Math.random() * 5 + 5) + 's';
+  
+  document.body.appendChild(snowflake);
+
+  // Delete snowflake after animation
+  setTimeout(() => {
+    snowflake.remove();
+  }, parseFloat(snowflake.style.animationDuration) * 1000);
+}
+
+// Create snowflakes at intervals 200ms
+setInterval(createSnowflake, 200);
+
+// Countdown timer to New Year
+function updateCountdown() {
+  const now = new Date();
+  const newYear = new Date(now.getFullYear() + 1, 0, 1);
+  const diff = newYear - now;
+
+  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+  const minutes = Math.floor((diff / (1000 * 60)) % 60);
+  const seconds = Math.floor((diff / 1000) % 60);
+
+  document.getElementById('timer').textContent = 
+    `${days}d ${hours}h ${minutes}m ${seconds}s`;
+}
+
+setInterval(updateCountdown, 1000);
+updateCountdown();
 
